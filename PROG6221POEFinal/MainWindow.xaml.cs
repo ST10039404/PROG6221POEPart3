@@ -68,5 +68,10 @@ namespace PROG6221POEFinal
         {
             MainWindow run = new MainWindow(recipes);
         }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            MainWindow run = new MainWindow(recipes);
+        }
     }
 }

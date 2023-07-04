@@ -11,7 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
 
         <Grid>
@@ -22,8 +22,34 @@
         </Grid>
 
         <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Grid.Column="0" FontSize="16" Text="Current Index" HorizontalAlignment="Center"/>
+                <TextBox x:Name="currIndexInput" Grid.Column="1" Width="450" Height="25"/>
+            </Grid>
+            
+            <TextBlock Grid.Row="1" Text="{Binding}"/>
+            <TextBlock Grid.Row="2" Text="{Binding}"/>
+            <TextBlock Grid.Row="3" Text="{Binding}"/>
 
         </Grid>
-        
+
     </Grid>
 </Window>

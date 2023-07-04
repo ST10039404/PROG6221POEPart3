@@ -23,12 +23,35 @@
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-
+                <RowDefinition Height="25"></RowDefinition>
+                <RowDefinition Height="*" MinHeight="70"></RowDefinition>
+                <RowDefinition Height="25"></RowDefinition>
+                <RowDefinition Height="*" MinHeight="70"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
+            <TextBlock Text="Clear One" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0"/>
+            <TextBlock Text="Clear All" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2"/>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
         </Grid>
 
     </Grid>

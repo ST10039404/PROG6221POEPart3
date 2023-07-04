@@ -33,6 +33,15 @@ namespace PROG6221POEFinal
             createIngredientsArray(numIngredients);
             createStepsArray(numSteps);
         }
+
+        public Recipe(string recipeName, object[,] recipeIngredientsArray, string[] recipeStepsArray)
+        {
+
+
+            this.recipeName = recipeName;
+            this.recipeIngredientsArray = recipeIngredientsArray;
+            this.recipeStepsArray = recipeStepsArray;
+        }
         ///////  CONSTRUCTORS  /////////////////////////////////////////////////////////////////////////////////////////////////  
 
 

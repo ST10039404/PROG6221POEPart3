@@ -23,13 +23,88 @@
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Input Recipe Name" Grid.Column="0" Margin="15" Height="36" Width="220"/>
+                <TextBox x:Name="input1" Grid.Column="1" Margin="15" Height="35" Width="220"/>
+                <Button Content="Submit" Grid.Column="2" Margin="15" Height="36" Width="160"/>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="New Ingredient" Grid.Column="0" Margin="15" Height="36" Width="220"/>
+                <Button Content="Create" Grid.Column="1" Grid.ColumnSpan="2" Margin="15" Height="36" Width="320"/>
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Input New Step" Grid.Column="0" Margin="15" Height="36" Width="220"/>
+                <Button Content="Create" Grid.Column="1" Grid.ColumnSpan="2" Margin="15" Height="36" Width="320"/>
+
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Clear" Grid.Column="1" Margin="15" Height="36" Width="160"/>
+                <Button Content="Submit" Grid.Column="2" Margin="15" Height="36" Width="160"/>
+
+            </Grid>
+
+            <Grid Grid.Row="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
         </Grid>
-        
+
     </Grid>
 </Window>

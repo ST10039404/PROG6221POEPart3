@@ -36,5 +36,10 @@ namespace PROG6221POEFinal
         {
             MainWindow run = new MainWindow(recipes);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
