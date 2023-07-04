@@ -146,8 +146,8 @@ namespace PROG6221POEFinal
                 setIngredientsObject(i, 1, ingredientQuantity);
                 setIngredientsObject(i, 2, ingredientMeasureUnit);
                 setIngredientsObject(i, 3, 1);
-                setIngredientsObject(i, 5, ingredientCalories);
-                setIngredientsObject(i, 6, ingredientFoodGroup);
+                setIngredientsObject(i, 4, ingredientCalories);
+                setIngredientsObject(i, 5, ingredientFoodGroup);
                 //the recipeIngredientsArrray[i,3] will serve as a multiplier which is linked directly to displaying of each recipe with a simplified way of changing factored amount or returning the factored amount to normal (for the quantity)
             }
         }

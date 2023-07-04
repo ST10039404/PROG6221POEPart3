@@ -66,7 +66,7 @@ namespace PROG6221POEFinal
             for (int i = 0; i < recipes.Count; i++)
             {
                 int calorieCount = 0;
-                for (int j = 0; j < recipes.ElementAt(i).getIngredientsArray().Length; j++)
+                for (int j = 0; j < recipes.ElementAt(i).getIngredientsArray().GetLength(0); j++)
                 {
                     calorieCount += Convert.ToInt32(recipes.ElementAt(i).getIngredientsObject(i, 5));
                 }

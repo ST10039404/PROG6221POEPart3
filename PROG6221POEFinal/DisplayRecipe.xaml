@@ -39,15 +39,26 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                
-                <TextBlock Grid.Column="0" FontSize="16" Text="Current Index" HorizontalAlignment="Center"/>
+
+                <Grid Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" FontSize="16" Text="Current Index" HorizontalAlignment="Center"/>
+                    <TextBlock x:Name="currIndexBlock" Grid.Column="1" FontSize="16" Text="" HorizontalAlignment="Center"/>
+                </Grid>
+
                 <TextBox x:Name="currIndexInput" Grid.Column="1" Width="450" Height="25"/>
+                <Button Grid.Column="2" Width="100" Height="23" Click="IndexUpdate_Click"/>
+                
             </Grid>
             
-            <TextBlock Grid.Row="1" Text="{Binding}"/>
-            <TextBlock Grid.Row="2" Text="{Binding}"/>
-            <TextBlock Grid.Row="3" Text="{Binding}"/>
+            <TextBlock x:Name="nameBlock" Grid.Row="1" Text=""/>
+            <TextBlock x:Name="ingredientsBlock" Grid.Row="2" Text=""/>
+            <TextBlock x:Name="stepsBlock" Grid.Row="3" Text=""/>
 
         </Grid>
 
