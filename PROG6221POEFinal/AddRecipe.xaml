@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PROG6221POEFinal"
         xmlns:userControls="clr-namespace:PROG6221POEFinal.View.UserControls"
         mc:Ignorable="d"
-        Title="AddRecipe" Height="450" Width="800">
+        Title="AddRecipe" Height="600" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -23,10 +23,7 @@
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition MinHeight="66" Height="66"></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -43,68 +40,92 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="Input Recipe Name" Grid.Column="0" Margin="15" Height="36" Width="220"/>
-                <TextBox x:Name="input1" Grid.Column="1" Margin="15" Height="35" Width="220"/>
+                <TextBlock FontWeight="Bold" Text="Input Recipe Name" Grid.Column="0" Margin="15" Height="36" Width="220"/>
+                <TextBox x:Name="recipeNameInput" Grid.Column="1" Margin="15" Height="35" Width="220"/>
                 <Button Content="Submit" Grid.Column="2" Margin="15" Height="36" Width="160"/>
 
             </Grid>
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="1" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="New Ingredient" Grid.Column="0" Margin="15" Height="36" Width="220"/>
-                <Button Content="Create" Grid.Column="1" Grid.ColumnSpan="2" Margin="15" Height="36" Width="320"/>
+                <Grid Grid.Row="1"  Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="50" MaxHeight="80"></RowDefinition>
+                        <RowDefinition MinHeight="50" MaxHeight="80"></RowDefinition>
+                        <RowDefinition MinHeight="50" MaxHeight="80"></RowDefinition>
+                        <RowDefinition MinHeight="50" MaxHeight="80"></RowDefinition>
+                        <RowDefinition MinHeight="50" MaxHeight="80"></RowDefinition>
+                        <RowDefinition MinHeight="50"></RowDefinition>
+                        <RowDefinition Height="35" MinHeight="50" MaxHeight="80"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock FontWeight="Bold" Text="Ingredient" Grid.ColumnSpan="3" Grid.Row="0" Grid.Column="0" FontSize="16" Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock FontWeight="Bold" Text="Ingredient Name" Grid.Row="1" Grid.Column="0" Margin="15" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="9"/>
+                    <TextBlock FontWeight="Bold" Text="Ingredient Quantity" Grid.Row="2" Grid.Column="0" Margin="15" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="9"/>
+                    <TextBlock FontWeight="Bold" Text="Ingredient Measurement Unit" TextWrapping="WrapWithOverflow" Grid.Row="3" Grid.Column="0" Margin="15"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="9"/>
+                    <TextBlock FontWeight="Bold" Text="Ingredient Calories" Grid.Row="4" Grid.Column="0" Margin="15" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="9"/>
+                    <TextBlock FontWeight="Bold" Text="Ingredient Food Group" Grid.Row="5" Grid.Column="0" Margin="15" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="9"/>
+
+                    <TextBox x:Name="nameInput" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="50" Width="220" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBox x:Name="quantityInput" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="50" Width="220" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBox x:Name="measurementInput" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="50" Width="220" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBox x:Name="caloriesInput" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="50" Width="220" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBox x:Name="foodGroupInput" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="50" Width="220" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                    <Button x:Name="createIngredient" Content="Add" Grid.Row="6" Grid.ColumnSpan="3" Margin="15" Height="20" Width="90" VerticalAlignment="Center" HorizontalAlignment="Center" Click="createIngredient_Click"/>
+
+                </Grid>
+                
+
+                <Grid Grid.Row="1"  Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="35" MinHeight="50" MaxHeight="80"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock FontWeight="Bold" Text="Step" Grid.Column="0" Grid.ColumnSpan="3" FontSize="16" Margin="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock FontWeight="Bold" Text="Step Description" Grid.Row="1" Grid.Column="0" Margin="15" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="10"/>
+                    <TextBox x:Name="stepDescriptionInput" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" TextWrapping="Wrap" Height="250" Width="230"  VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Top" HorizontalContentAlignment="Left"/>
+                    <Button x:Name="createStep" Content="Add" Grid.Row="3" Grid.ColumnSpan="3" Margin="15" Height="20" Width="90" VerticalAlignment="Center" HorizontalAlignment="Center" Click="createStep_Click"/>
+
+                </Grid>
 
             </Grid>
 
-            <Grid Grid.Row="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <TextBlock Text="Input New Step" Grid.Column="0" Margin="15" Height="36" Width="220"/>
-                <Button Content="Create" Grid.Column="1" Grid.ColumnSpan="2" Margin="15" Height="36" Width="320"/>
-
-            </Grid>
-
-            <Grid Grid.Row="3">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <Button Content="Clear" Grid.Column="1" Margin="15" Height="36" Width="160"/>
-                <Button Content="Submit" Grid.Column="2" Margin="15" Height="36" Width="160"/>
-
-            </Grid>
-
-            <Grid Grid.Row="4">
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-            </Grid>
+            
         </Grid>
 
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="Submit" Grid.Column="1" Margin="-100,15,100,15" Height="36" Width="160" HorizontalAlignment="Center" Click="Submit_Click"/>
+            <Button Content="Clear" Grid.Column="1" Margin="100,15,-100,15" Height="36" Width="160" HorizontalAlignment="Center" Click="Clear_Click"/>
+
+        </Grid>
     </Grid>
 </Window>

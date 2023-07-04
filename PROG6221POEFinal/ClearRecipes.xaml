@@ -40,8 +40,13 @@
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Column="0" x:Name="ClearOneIndex" Margin="15"></TextBox>
+                <Button Grid.Column ="1" Content="Clear One (using index in left text box)" Grid.ColumnSpan="3" Click="ClearOne_Click"/>
+
             </Grid>
 
             <Grid Grid.Row="3">
@@ -49,8 +54,12 @@
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
+
+                <Button Content="Clear All" Grid.ColumnSpan="3" Click="ClearAll_Click"/>
+
             </Grid>
         </Grid>
 

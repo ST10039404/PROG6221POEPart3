@@ -36,5 +36,19 @@ namespace PROG6221POEFinal
         {
             MainWindow run = new MainWindow(recipes);
         }
+
+        private void ClearOne_Click(object sender, RoutedEventArgs e)
+        {
+            int x;
+            if (Int32.TryParse(ClearOneIndex.Text, out x) && x >= recipes.Count)
+                recipes.Remove(recipes[x]);
+            else
+                MessageBox.Show("Index Value invalid (out of range or not parseable)");
+        }
+
+        private void ClearAll_Click(object sender, RoutedEventArgs e)
+        {
+            recipes.Clear();
+        }
     }
 }
