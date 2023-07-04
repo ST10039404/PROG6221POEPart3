@@ -49,15 +49,15 @@ namespace PROG6221POEFinal
 
         private void createStep_Click(object sender, RoutedEventArgs e)
         {
-            createStep();
+            createMyStep();
         }
 
         private void createIngredient_Click(object sender, RoutedEventArgs e)
         {
-            createIngredient();
+            createMyIngredient();
         }
 
-        public object[,] createIngredient()
+        public object[,] createMyIngredient()
         {
             int quantity;
             int calories;
@@ -86,7 +86,7 @@ namespace PROG6221POEFinal
             return ingredients;
         }
 
-        public string[] createStep()
+        public string[] createMyStep()
         {
             if (!String.IsNullOrWhiteSpace(stepDescriptionInput.Text))
             {

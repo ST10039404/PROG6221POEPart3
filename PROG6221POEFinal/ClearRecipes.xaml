@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PROG6221POEFinal"
-        xmlns:userControls="clr-namespace:PROG6221POEFinal.View.UserControls"
         mc:Ignorable="d"
         Title="ClearRecipes" Height="450" Width="800">
     <Grid>
@@ -17,7 +16,7 @@
         <Grid>
             <Menu>
                 <MenuItem Header="Main Menu" FontSize="16" Click="Main_Menu_Click"/>
-                <MenuItem Header="Exit" FontSize="16" Click="Exit"/>
+                
             </Menu>
         </Grid>
 

@@ -16,7 +16,7 @@
         <Grid>
             <Menu>
                 <MenuItem Header="Main Menu" FontSize="16" Click="Main_Menu_Click"/>
-                <MenuItem Header="Exit" FontSize="16" Click="Exit"/>
+                
             </Menu>
         </Grid>
 

@@ -71,7 +71,7 @@ namespace PROG6221POEFinal
                     calorieCount += Convert.ToInt32(recipes.ElementAt(i).getIngredientsObject(i, 5));
                 }
 
-                value += ("\n{0}: Recipe Name: {1}, Total Calories: {2}", i + 1, calorieCount);
+                value += ("\n{0}: Recipe Name: {1}, Total Calories: {2}, Index Value: {3}", i + 1, calorieCount,i);
             }
             return value;
         }
